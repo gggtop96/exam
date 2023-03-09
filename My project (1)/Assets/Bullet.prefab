@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8558735251063819448}
   - component: {fileID: 2511227402017619006}
   - component: {fileID: -2276821982365839375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -2070391513
+  m_SortingLayer: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 1737672109, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fc91833d81ac043bf0a091e5441fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fxPrefab: {fileID: 0}
 --- !u!50 &-2276821982365839375
 Rigidbody2D:
   serializedVersion: 4

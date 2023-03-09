@@ -21,11 +21,17 @@ public class PlayerController : MonoBehaviour
     private bool onClimb;
     private bool onDead;
 
-    // 복사할 총알 원본
+    // 복제할 총알 원본
     public GameObject BulletPrefab;
-    
+
+    // 복제할 FX 원본
+    public GameObject fxPrefab;
+
+    //
+    public GameObject[] stageBack = new GameObject[7];
+
     // 복제된 총알의 저장공간
-    private List<GameObject> Bullets = new List<GameObject>();
+    public List<GameObject> Bullets = new List<GameObject>();
    
     // 플레이어가 마지막으로 바라본 방향
     private float Direction;
@@ -51,6 +57,9 @@ public class PlayerController : MonoBehaviour
         onAttack = false;
         onHit = false;
         Direction = 1.0f;
+
+        for (int i = 0; i < 7; ++i)
+            stageBack[i] = GameObject.Find(i.ToString());
     }
 
     // 유니티 기본 제공 함수
@@ -97,7 +106,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Minus))
             OnDead();
         // ================= 총알 키 코드
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             // 총알 원본을 복제한다
             GameObject Obj = Instantiate(BulletPrefab);
@@ -111,9 +120,12 @@ public class PlayerController : MonoBehaviour
             // 총알 스크립트내부의 방향 변수를 현재 플레이어의 방향 변수로 초기화 한다.
             // Controller.Direction = transform.right;
             Controller.Direction = new Vector3(Direction, 0.0f, 0.0f);
+            
+            //
+             Controller.fxPrefab = fxPrefab;
 
-            // 총알의 SpriteRenderer를 받아온다
-            SpriteRenderer renderer = Obj.GetComponent<SpriteRenderer>();
+    // 총알의 SpriteRenderer를 받아온다
+    SpriteRenderer renderer = Obj.GetComponent<SpriteRenderer>();
 
             // 총알의 이미지 반전 상태를 플레이어의 이미지 반전상태로 설정한다.
             renderer.flipY = spriteRenderer.flipX;
@@ -127,7 +139,10 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Hor);  //  Hor -> Movement.x 가 더 정확한 표현
 
         // 실제 플레이어를 움직인다.
-        transform.position += Movement;
+        //transform.position += Movement;
+
+        //offset box
+        //transform.position += Movement;
     }
 
     // ================= 공격
