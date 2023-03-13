@@ -1187,8 +1187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11decd29339558a43b26ab9b2a4c8206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 4475176881833316956, guid: e90ea8dcb79562148b27d435fa4c123f, type: 3}
-  fxPrefab: {fileID: 1892078723244562, guid: 64e0b5bbb57fc04418a0d96c678e6514, type: 3}
+  BulletPrefab: {fileID: 0}
+  fxPrefab: {fileID: 0}
   stageBack:
   - {fileID: 0}
   - {fileID: 0}
@@ -1197,8 +1197,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Bullets: []
-  Dir: 0
+  DirLeft: 0
+  DirRight: 0
 --- !u!1 &2068179915
 GameObject:
   m_ObjectHideFlags: 0

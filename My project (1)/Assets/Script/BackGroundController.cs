@@ -24,7 +24,7 @@ public class BackGroundController : MonoBehaviour
 
     // ** 플레이어 정보
     private GameObject player;
-    private PlayerController playerRenderer;
+    private PlayerController playerController;
 
     // ** 움직임 정보
     private Vector3 movemane;
@@ -40,11 +40,11 @@ public class BackGroundController : MonoBehaviour
         // ** 부모객체를 받아온다.
         parent = GameObject.Find("BackGround").transform;
 
-        // ** 현재이미지를 담고있는 구성요소를 받아온다.
+        // ** 현재 이미지를 담고있는 구성요소를 받아온다.
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // 플레이어 이미지를 담고 있는 구성요소를 받아온다
-        playerRenderer = player.GetComponent<PlayerController>();
+        // ** 플레이어 이미지를 담고있는 구성요소를 받아온다.
+        playerController = player.GetComponent<PlayerController>();
     }
 
     void Start()
@@ -57,36 +57,49 @@ public class BackGroundController : MonoBehaviour
 
         // ** 종료지점을 설정.
         exitPoint = -(sprite.bounds.size.x * 0.5f) + player.transform.position.x;
-
     }
 
     void Update()
     {
-        SpriteRenderer playerRenderer =  player.GetComponent<SpriteRenderer>();
-       
-        // 플레이어가 바라보고 있는 방향에 따라 분기됨
-        if(playerRenderer.flipX)
-        {// 좌측이동
 
+        
+        // ** 플레이어가 바라보고 있는 방향에 따라 분기됨. 
+        if(ControllerManager.GetInstace().DirLeft)
+        {// ** 좌측 이동
 
-            // ** 이동정보 셋팅
-            movemane = new Vector3(
-                Input.GetAxisRaw("Horizontal") * Time.deltaTime * Speed + offset.x, // ** singleton
-                player.transform.position.y + offset.y,
-                0.0f + offset.z);
-        }
-        else
-        {// 우측이동
-
+            
         }
 
+        if (ControllerManager.GetInstace().DirRight)
+        {// ** 우측 이동
+
+            print("Right" + playerController);
+           
+        }
+         
+
+        // ** 이동정보 셋팅 - 권장하는 방법이 아님
+        movemane = new Vector3(
+            Input.GetAxisRaw("Horizontal") * Time.deltaTime * Speed + offset.x, // ** singleton
+            player.transform.position.y + offset.y,
+            0.0f + offset.z);
 
         // ** 이동정보 적용
-        transform.position -= movemane;
-        endPoint -= movemane.x;
+        if(ControllerManager.GetInstace().DirRight)
+        {
+            endPoint -= movemane.x;
+        }
+      
+        
 
-        // ** 동일한 이미지 복사
-        if (player.transform.position.x + (sprite.bounds.size.x * 0.5f) + 1 > endPoint)
+        if (ControllerManager.GetInstace().DirRight)
+        {
+            if(transform.position.x < 0)
+                transform.position -= movemane;
+        }
+
+            // ** 동일한 이미지 복사
+            if (player.transform.position.x + (sprite.bounds.size.x * 0.5f) + 1 > endPoint)
         {
             // ** 이미지를 복제한다.
             GameObject Obj = Instantiate(this.gameObject);

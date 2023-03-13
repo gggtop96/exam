@@ -47,6 +47,11 @@ public class PlayerController : MonoBehaviour
 
         // ** player 의 SpriteRenderer를 받아온다.
         playerRenderer = this.GetComponent<SpriteRenderer>();
+
+        // [resource] 폴더에서 사용할 리소스를 들고 온다.
+        BulletPrefab = Resources.Load("Prefabs/Bullet") as GameObject ;
+        
+        fxPrefab = Resources.Load("Prefabs/FX/Smoke") as GameObject;
     }
 
     // ** 유니티 기본 제공 함수
@@ -78,11 +83,34 @@ public class PlayerController : MonoBehaviour
         // ** Hor이 0이라면 멈춰있는 상태이므로 예외처리를 해준다. 
         if (Hor != 0)
             Direction = Hor;
-        else
+
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            DirLeft = false;
-            DirRight = false;
+            if (transform.position.x < 0)
+                transform.position += Movement;
+            else { 
+            ControllerManager.GetInstace().DirRight = true;
+            ControllerManager.GetInstace().DirLeft = false;
+            }
         }
+
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            ControllerManager.GetInstace().DirRight =false;
+            ControllerManager.GetInstace().DirLeft = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow) )
+        {
+            ControllerManager.GetInstace().DirRight = false;
+            ControllerManager.GetInstace().DirLeft = false;
+        }
+
+        // ** 입력받은 값으로 플레이어를 움직인다.
+        Movement = new Vector3(
+            Hor * Time.deltaTime * Speed,
+            0.0f,
+            0.0f);
 
         // ** 플레이어가 바라보고있는 방향에 따라 이미지 반전 설정.
         if (Direction < 0)
@@ -97,15 +125,6 @@ public class PlayerController : MonoBehaviour
             DirRight = true;
         }
 
-
-
-        // ** 입력받은 값으로 플레이어를 움직인다.
-        Movement = new Vector3(
-            Hor * Time.deltaTime * Speed,
-            0.0f,
-            0.0f);
-
-
         // ** 좌측 쉬프트키를 입력한다면.....
         if (Input.GetKey(KeyCode.LeftShift))
             // ** 피격
@@ -117,7 +136,7 @@ public class PlayerController : MonoBehaviour
             // ** 공격
             OnAttack();
 
-            // ** 총알원본을 본제한다.
+            // ** 총알원본을 복제한다.
             GameObject Obj = Instantiate(BulletPrefab);
 
             // ** 복제된 총알의 위치를 현재 플레이어의 위치로 초기화한다.
