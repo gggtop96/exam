@@ -32,6 +32,8 @@ public class BackGroundController : MonoBehaviour
     // ** 이미지가 중앙 위치에 정상적으로 노출될 수 있도록 하기 위한 완충역할.
     private Vector3 offset = new Vector3(0.0f, 7.5f, 0.0f);
 
+    private GameObject Test;
+
     private void Awake()
     {
         // ** 플레이어의 기본정보를 받아온다.
@@ -55,51 +57,33 @@ public class BackGroundController : MonoBehaviour
         // ** 시작지점을 설정.
         endPoint = sprite.bounds.size.x * 0.5f + transform.position.x;
 
+        /*
+        Test = new GameObject("Gozmo");
+        Test.AddComponent<MyGizmo>();
+        Test.transform.position = new Vector3(endPoint, 0.0f, 0.0f);
+         */
+
+
         // ** 종료지점을 설정.
         exitPoint = -(sprite.bounds.size.x * 0.5f) + player.transform.position.x;
     }
 
     void Update()
     {
-
-        
-        // ** 플레이어가 바라보고 있는 방향에 따라 분기됨. 
-        if(ControllerManager.GetInstace().DirLeft)
-        {// ** 좌측 이동
-
-            
-        }
-
-        if (ControllerManager.GetInstace().DirRight)
-        {// ** 우측 이동
-
-            print("Right" + playerController);
-           
-        }
-         
-
-        // ** 이동정보 셋팅 - 권장하는 방법이 아님
+        // ** 이동정보 셋팅
         movemane = new Vector3(
-            Input.GetAxisRaw("Horizontal") * Time.deltaTime * Speed + offset.x, // ** singleton
-            player.transform.position.y + offset.y,
-            0.0f + offset.z);
+            Input.GetAxisRaw("Horizontal") * Time.deltaTime * Speed + offset.x,
+            0.0f, 0.0f);
 
-        // ** 이동정보 적용
-        if(ControllerManager.GetInstace().DirRight)
+        // ** singleton
+        if (ControllerManager.GetInstance().DirRight)
         {
+            transform.position -= movemane;
             endPoint -= movemane.x;
         }
-      
-        
 
-        if (ControllerManager.GetInstace().DirRight)
-        {
-            if(transform.position.x < 0)
-                transform.position -= movemane;
-        }
-
-            // ** 동일한 이미지 복사
-            if (player.transform.position.x + (sprite.bounds.size.x * 0.5f) + 1 > endPoint)
+        // ** 동일한 이미지 복사
+        if (player.transform.position.x + (sprite.bounds.size.x * 0.5f) + 1 > endPoint)
         {
             // ** 이미지를 복제한다.
             GameObject Obj = Instantiate(this.gameObject);

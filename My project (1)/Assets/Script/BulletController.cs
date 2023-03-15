@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BullerController : MonoBehaviour
+public class BulletController : MonoBehaviour
 {
     // ** 총알이 날아가는 속도
     private float Speed;
@@ -40,28 +40,26 @@ public class BullerController : MonoBehaviour
         // ** 이펙트효과 복제.
         GameObject Obj = Instantiate(fxPrefab);
 
-        // ** 진동효과를 생성할 관리자 생성.
-        GameObject camera = new GameObject("Camera Test");
-
-        // ** 진동 효과 컨트롤러 생성.
-        camera.AddComponent<CameraController>();
-
         // ** 이펙트효과의 위치를 지정
         Obj.transform.position = transform.position;
 
+        
+
         // ** collision = 충돌한 대상.
         // ** 충돌한 대상을 삭제한다. 
-        if(collision.transform.tag != "wall")
-        {
-            Destroy(collision.transform.gameObject);
-        }
+        if (collision.transform.tag != "wall")
+            Destroy(this.gameObject);
         else
         {
-            Destroy(this.gameObject);
+            // ** 진동효과를 생성할 관리자 생성.
+            GameObject camera = new GameObject("Camera Test");
+
+            // ** 진동 효과 컨트롤러 생성.
+            camera.AddComponent<CameraController>();
         }
 
         // ** 총알의 충돌 횟수가 0이 되면 총알 삭제.
         if (hp == 0)
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,0.016f);
     }
 }
