@@ -49,6 +49,10 @@ public class PlayerController : MonoBehaviour
     public bool DirLeft;
     [Tooltip("오른쪽")]
     public bool DirRight;
+    [Tooltip("위쪽")]
+    public bool DirUp;
+    [Tooltip("아래쪽")]
+    public bool DirDown;
 
 
     private float CoolDown;
@@ -82,6 +86,8 @@ public class PlayerController : MonoBehaviour
 
         DirLeft = false;
         DirRight = false;
+        DirUp = false;
+        DirDown = false;
 
         CoolDown = 1.0f;
 
@@ -132,15 +138,33 @@ public class PlayerController : MonoBehaviour
                 transform.position += Movement;
         }
 
+        //위아래 제한 추가
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            // **플레이어의 좌표가 -15.0 보다 클때 플레이어만 움직인다.
+            if (transform.position.y < -3.5f)
+                transform.position += Movement;
+        }
 
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            // ** 플레이어의 좌표가 -3.5f 보다 작을때 플레이어만 움직인다.
+            if (transform.position.y > -7.5f)
+                transform.position += Movement;
+        }
 
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || 
-            Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow) ||
+            Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) ||
+            Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) ||
+            Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
         {
             ControllerManager.GetInstance().DirRight = false;
             ControllerManager.GetInstance().DirLeft = false;
+            ControllerManager.GetInstance().DirUp = false;
+            ControllerManager.GetInstance().DirDown = false;
+            
         }
-        
+
 
         // ** 플레이어가 바라보고있는 방향에 따라 이미지 반전 설정.
         if (Direction < 0)

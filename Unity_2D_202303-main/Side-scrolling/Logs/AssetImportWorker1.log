@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/SGA/Desktop/Unity_2D_202303-main/Side-scrolling
+C:/Users/SGA/Desktop/exam/exam/Unity_2D_202303-main/Side-scrolling
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50788
-Successfully changed project path to: C:/Users/SGA/Desktop/Unity_2D_202303-main/Side-scrolling
-C:/Users/SGA/Desktop/Unity_2D_202303-main/Side-scrolling
+65163
+Successfully changed project path to: C:/Users/SGA/Desktop/exam/exam/Unity_2D_202303-main/Side-scrolling
+C:/Users/SGA/Desktop/exam/exam/Unity_2D_202303-main/Side-scrolling
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,15 +47,15 @@ C:/Users/SGA/Desktop/Unity_2D_202303-main/Side-scrolling
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3888] Host "[IP] 192.168.0.96 [Port] 0 [Flags] 2 [Guid] 3209512545 [EditorId] 3209512545 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HQKDT44) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [14344] Host "[IP] 192.168.0.96 [Port] 0 [Flags] 2 [Guid] 4286969196 [EditorId] 4286969196 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HQKDT44) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3888] Host "[IP] 192.168.0.96 [Port] 0 [Flags] 2 [Guid] 3209512545 [EditorId] 3209512545 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HQKDT44) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14344] Host "[IP] 192.168.0.96 [Port] 0 [Flags] 2 [Guid] 4286969196 [EditorId] 4286969196 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HQKDT44) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 28.97 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 24.28 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.19f1 (c9714fde33b6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/SGA/Desktop/Unity_2D_202303-main/Side-scrolling/Assets
+[Subsystems] Discovering subsystems at path C:/Users/SGA/Desktop/exam/exam/Unity_2D_202303-main/Side-scrolling/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -67,38 +67,38 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003988 seconds.
+Registered in 0.004000 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 2174 ms
-Refreshing native plugins compatible for Editor in 26.45 ms, found 2 plugins.
+Android Extension - Scanning For ADB Devices 149 ms
+Refreshing native plugins compatible for Editor in 22.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.579 seconds
+- Completed reload, in  0.566 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2579ms)
-		BeginReloadAssembly (47ms)
+	ReloadAssembly (566ms)
+		BeginReloadAssembly (53ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (2460ms)
-			LoadAssemblies (46ms)
+		EndReloadAssembly (439ms)
+			LoadAssemblies (52ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (70ms)
+			SetupTypeCache (71ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (18ms)
-			SetupLoadedEditorAssemblies (2338ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (310ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2220ms)
+				InitializePlatformSupportModulesInManaged (195ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (27ms)
+				RefreshPlugins (23ms)
 				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (62ms)
 				ProcessInitializeOnLoadMethodAttributes (28ms)
@@ -108,50 +108,50 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001409 seconds.
+Registered in 0.001465 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.570 seconds
+- Completed reload, in  0.591 seconds
 Domain Reload Profiling:
-	ReloadAssembly (570ms)
-		BeginReloadAssembly (71ms)
+	ReloadAssembly (592ms)
+		BeginReloadAssembly (73ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (418ms)
-			LoadAssemblies (43ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (428ms)
+			LoadAssemblies (47ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (119ms)
+			SetupTypeCache (117ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (190ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (204ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (33ms)
-				ProcessInitializeOnLoadAttributes (125ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
+				BeforeProcessingInitializeOnLoad (38ms)
+				ProcessInitializeOnLoadAttributes (127ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1442 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 15 unused Assets / (30.2 KB). Loaded Objects now: 1919.
-Memory consumption went from 74.7 MB to 74.7 MB.
-Total: 1.781800 ms (FindLiveObjects: 0.090100 ms CreateObjectMapping: 0.023300 ms MarkObjects: 1.650700 ms  DeleteObjects: 0.017100 ms)
+Unloading 1490 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (21.9 KB). Loaded Objects now: 1971.
+Memory consumption went from 76.5 MB to 76.5 MB.
+Total: 1.962100 ms (FindLiveObjects: 0.098400 ms CreateObjectMapping: 0.032800 ms MarkObjects: 1.816400 ms  DeleteObjects: 0.013900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -165,94 +165,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1272.491900 seconds.
-  path: Assets/BMDOHYEON_ttf.ttf
-  artifactKey: Guid(93cacfc9ef82e04438003631cd53519f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BMDOHYEON_ttf.ttf using Guid(93cacfc9ef82e04438003631cd53519f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95883b36824f3b0aba81050024cd80f0') in 0.097804 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1189.228483 seconds.
-  path: Assets/Textures/GUI.png
-  artifactKey: Guid(1eaee135ce037439d925cee5e41ce026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/GUI.png using Guid(1eaee135ce037439d925cee5e41ce026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd679b5cb970d952b2551ceb97fd3817b') in 0.196785 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.444042 seconds.
-  path: Assets/Textures/Boss/penguin_atack_02.png
-  artifactKey: Guid(0dda9efeece02c3488735399dbffb0cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_atack_02.png using Guid(0dda9efeece02c3488735399dbffb0cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d16c80f6bf830c25fce0cd258887d23') in 0.035230 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Textures/Boss/penguin_jump_01.png
-  artifactKey: Guid(d00a97fec0ddfde49bb6a9ae8d67a45b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_jump_01.png using Guid(d00a97fec0ddfde49bb6a9ae8d67a45b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d72a962e42e17c71cac4b72111ffb1') in 0.022878 seconds 
+  Time since last request: 3228.412241 seconds.
+  path: Assets/99. Resource/Undead Survivor/Sprites/Tile 1.asset
+  artifactKey: Guid(3b1cddaf2e6d6a749b6ca9f1102de869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/99. Resource/Undead Survivor/Sprites/Tile 1.asset using Guid(3b1cddaf2e6d6a749b6ca9f1102de869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a3ed6f50424abb76c193eafed619808') in 0.050819 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
-  path: Assets/Textures/Boss/penguin_slide_01.png
-  artifactKey: Guid(8bd8a87ef1d4a5c45a119c9abdfb08af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_slide_01.png using Guid(8bd8a87ef1d4a5c45a119c9abdfb08af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c750a8775570dc46dcd317080d5de713') in 0.023360 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Textures/Boss/penguin_walk_08.png
-  artifactKey: Guid(b8cde0148568e5c46991e889cfc06f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_walk_08.png using Guid(b8cde0148568e5c46991e889cfc06f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8cd32ea03de97029e61f57eeb159c75') in 0.022222 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Textures/Boss/penguin_idle_03.png
-  artifactKey: Guid(e9edcc163e6607941b40459039ff3ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_idle_03.png using Guid(e9edcc163e6607941b40459039ff3ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef58e20285f40698a770f5d4b26f620b') in 0.020630 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Textures/Boss/penguin_walk_03.png
-  artifactKey: Guid(0da402cd4c165004fbce7ae0fe1e8368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_walk_03.png using Guid(0da402cd4c165004fbce7ae0fe1e8368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89d4b124099a3d957a976700a58adec4') in 0.022097 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Textures/Boss/penguin_jumpl_03.png
-  artifactKey: Guid(ee1a12069c8273149801819a62088d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_jumpl_03.png using Guid(ee1a12069c8273149801819a62088d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba59a712c952bdd509d7bd72dccf326') in 0.022580 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Textures/Boss/penguin_walk_01.png
-  artifactKey: Guid(dff6bb17b24945d428995c019750f524) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_walk_01.png using Guid(dff6bb17b24945d428995c019750f524) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d16e8576c51208945fa34801991aad9') in 0.021275 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Textures/Boss/penguin_atack_03.png
-  artifactKey: Guid(3aa8bb72e976c5c4bbe8f41513c4df8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_atack_03.png using Guid(3aa8bb72e976c5c4bbe8f41513c4df8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39e7b9b39c8cc8e71453be10be055201') in 0.022474 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Textures/Boss/penguin_slide_02.png
-  artifactKey: Guid(e8c6a0c8170f48a4a8ffab289681844a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_slide_02.png using Guid(e8c6a0c8170f48a4a8ffab289681844a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a06f013bfecc7a984efb8a7f2aebd232') in 0.031796 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Textures/Boss/penguin_walk_07.png
-  artifactKey: Guid(3dd30c99317697941ac6db1399c84432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/Boss/penguin_walk_07.png using Guid(3dd30c99317697941ac6db1399c84432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c6f5e080aa8e4291aff422438351051') in 0.024654 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.386233 seconds.
-  path: Assets/Textures/BackGround/2.png
-  artifactKey: Guid(60d030b843b032640af8989b639479c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/BackGround/2.png using Guid(60d030b843b032640af8989b639479c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae2e85cdfc2b69516c803be427b336c') in 0.467740 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Textures/BackGround/6.png
-  artifactKey: Guid(d207c299e6cc34641969bc223ede8109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/BackGround/6.png using Guid(d207c299e6cc34641969bc223ede8109) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2b78801db3f40a0716f900eb9a18d32') in 0.357166 seconds 
+  path: Assets/99. Resource/Undead Survivor/Sprites/Tile 2.asset
+  artifactKey: Guid(dd63e60518fa8c44cb5f06eafecbf2f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/99. Resource/Undead Survivor/Sprites/Tile 2.asset using Guid(dd63e60518fa8c44cb5f06eafecbf2f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71443064fe8339a8e8a3ddc9d40b22a') in 0.012707 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

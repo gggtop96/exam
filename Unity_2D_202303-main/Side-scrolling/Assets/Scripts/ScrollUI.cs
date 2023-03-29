@@ -23,7 +23,7 @@ public class ScrollUI : MonoBehaviour
         sizeX = 1000.0f;
         sizeY = 500.0f;
 
-        StartCoroutine(EffectUi());
+        //StartCoroutine(EffectUi());
     }
 
     private void OnEnable()
