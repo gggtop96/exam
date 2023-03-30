@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
 
     public float Speed;
     public int HP;
+    // public int ScoreValue;
     private Animator Anim;
     private Vector3 Movement;
 
@@ -24,6 +25,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        //ScoreValue = 0;
         Speed = 0.2f;
         Movement = new Vector3(1.0f, 0.0f, 0.0f);
         HP = 3;
@@ -76,6 +78,8 @@ public class EnemyController : MonoBehaviour
             {
                 Anim.SetTrigger("Die");
                 GetComponent<CapsuleCollider2D>().enabled = false;
+                ScoreManager.score += 100;
+                print("score + 100");
             }
         }
     }
