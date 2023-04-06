@@ -68,13 +68,16 @@ public class EnemyManager : MonoBehaviour
 
             // ** 클론의 위치를 초기화.
             Obj.transform.position = new Vector3(
-                18.0f, Random.Range(-3.5f, -7.5f), 0.0f);
+                18.0f, Random.Range(-3.4f, -6.5f), 0.0f);
 
             // ** 클론의 이름 초기화.
             Obj.transform.name = "Enemy";
 
             // ** 클론의 계층구조 설정.
             Obj.transform.SetParent(Parent.transform);
+
+            // ** 클론의 사이즈 변경
+            Obj.transform.localScale = new Vector3(2.5f, 2.5f, 1);
 
             // ** UI 캑체가 들고있는 스크립트에 접근.
             //EnemyHpBar EnemhpBar = Bar.GetComponent<EnemyHpBar>();

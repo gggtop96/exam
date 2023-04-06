@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     // ** 움직임을 저장하는 벡터
     private Vector3 Movement;
 
+    private int maxhealth;
+    private int health;
+
     // ** 플레이어의 Animator 구성요소를 받아오기위해...
     private Animator animator;
 
@@ -78,9 +81,10 @@ public class PlayerController : MonoBehaviour
     {
         // ** 속도를 초기화.
         Speed = 5.0f;
-        
-        // ** 초기값 셋팅
-        onAttack = true;        
+        maxhealth = 100;
+
+       // ** 초기값 셋팅
+       onAttack = true;        
         onHit = false;
         Direction = 1.0f;
 
