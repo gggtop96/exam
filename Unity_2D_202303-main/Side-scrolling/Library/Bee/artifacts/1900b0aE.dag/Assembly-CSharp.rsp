@@ -362,6 +362,7 @@
 "Assets/Scripts/ControllerManager.cs"
 "Assets/Scripts/EnemyController.cs"
 "Assets/Scripts/EnemyManager.cs"
+"Assets/Scripts/ExampleManager.cs"
 "Assets/Scripts/MyGizmo.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Scenemanager.cs"
