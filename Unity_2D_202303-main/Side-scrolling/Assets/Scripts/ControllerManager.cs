@@ -20,5 +20,5 @@ public class ControllerManager
     public bool DirDown;
 
     public float BulletSpeed = 10.0f;
-    public int Player_HP = 100;
+    public int Player_HP = 3;
 }

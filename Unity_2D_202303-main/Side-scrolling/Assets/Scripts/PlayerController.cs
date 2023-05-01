@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 
 public class PlayerController : MonoBehaviour
@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour
 
     // ** 움직임을 저장하는 벡터
     private Vector3 Movement;
-
-    private int maxhealth;
-    private int health;
 
     // ** 플레이어의 Animator 구성요소를 받아오기위해...
     private Animator animator;
@@ -30,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     // ** 복제할 FX 원본
     private GameObject fxPrefab;
+
+    public GameObject uiResult;
 
     // 추후 list로 변경
     public GameObject[] stageBack = new GameObject[7];
@@ -81,7 +80,6 @@ public class PlayerController : MonoBehaviour
     {
         // ** 속도를 초기화.
         Speed = 5.0f;
-        maxhealth = 100;
 
        // ** 초기값 셋팅
        onAttack = true;        
@@ -97,6 +95,23 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < 7; ++i)
             stageBack[i] = GameObject.Find(i.ToString());
+    }
+
+    private void GameOver()
+    {
+        StartCoroutine(GameOverRoutine());
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+
+    }
+
+    private void Gomain()
+    {
+        SceneManager.LoadScene(1);
     }
 
     // ** 유니티 기본 제공 함수
@@ -271,4 +286,6 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+
+    
 }

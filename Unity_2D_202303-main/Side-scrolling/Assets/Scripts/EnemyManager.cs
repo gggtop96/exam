@@ -45,6 +45,7 @@ public class EnemyManager : MonoBehaviour
             // ** Enemy로 사용할 원형 객체
             Prefab = Resources.Load("Prefabs/Enemy/Enemy") as GameObject;
             //HPPrefab = Resources.Load("Prefabs/HP") as GameObject;
+            Prefab.tag = "Enemy";
         }
     }
 
